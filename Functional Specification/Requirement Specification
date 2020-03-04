@@ -1,0 +1,40 @@
+Functional Requirements
+
+Functional requirements provide highly specific details that allow designers, developers and testers to create a system to 
+meet precise specifications. I've mapped them to user requirements file
+
+Social media are computer-mediated tools, and
+social media can be taken as high interactive
+platform for people to create, share and exchange
+information, knowledge, and other resources [1, 2].
+Functional requirements describe what the
+software system should do. The functional
+requirements mainly are the statements of the
+services that the system should provide, how the
+system react to inputs, and how the system should
+behave in some particular situations.
+
+
+F1. Posts can be 63,206 characters long. [ref U1]
+
+F2. Posts can be contain unicode characters. [ref U1]
+
+F3. Posts may not contain any any of the following formatting, other than what can be provided by unicode characters - 
+bold, strikethrough, underline [ref U1]
+
+F4. 80% or more of posts in a users' post list (U3) should be from their friends. The remaining posts can be public posts 
+or sponsored posts.
+
+
+
+Non Functional Requirements
+qualities and characteristics of the system that are not features. Again can be mapped to user or functional requirements
+
+N1. After submitting a post through the web interface (see U1), it will be available to appear to in other users' 
+lists of posts (see U3) within 30 seconds for 90% of posts.
+
+N2. An update to a users list of posts (either the initial view of a list, or an extension to the list when scrolling to 
+the bottom) appears in 3 seconds for 90% of users.
+
+N3. 50% of users can post a status update within 1 minute of starting to try and post without having used the application 
+before or receiving help.

@@ -1,0 +1,36 @@
+We'll be building this miniFacebook app with the Laravel Framework. The goal here is to give you a good, high-level overview of 
+how the Laravel framework works. By getting to know the overall framework better, everything feels less "magical".
+
+The entry point for all requests to a Laravel application is the public/index.php file. All requests are directed to this file by 
+your web server (Apache / Nginx) configuration. The index.php file doesn't contain much code. Rather, it is a starting point for 
+loading the rest of the framework.
+
+The index.php file loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application 
+from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application / service 
+container.
+
+Instead of defining all of our request handling logic as Closures in route files, we will organize this behavior using Controller 
+classes. Controllers can group related request handling logic into a single class. 
+
+All routes and controllers should return a response to be sent back to the user's browser.
+
+Views contain the HTML served by your application and separate your controller / application logic from your presentation logic. 
+Views are stored in the resources/views directory. 
+
+By default, Laravel's base controller class uses a ValidatesRequests trait which provides a convenient method to validate incoming 
+HTTP requests with a variety of powerful validation rules.
+
+The debug option in your config/app.php configuration file determines how much information about an error is actually displayed to 
+the user. By default, this option is set to respect the value of the APP_DEBUG environment variable, which is stored in our .env file
+
+Blade is the simple, yet powerful templating engine provided with Laravel. Unlike other popular PHP templating engines, Blade does 
+not restrict you from using plain PHP code in your views. In fact, all Blade views are compiled into plain PHP code and cached 
+until they are modified, meaning Blade adds essentially zero overhead to your application. Blade view files use the .blade.php 
+file extension and are typically stored in the resources/views directory.
+
+The database configuration for our application is located at config/database.php. In this file we define all of your database 
+connections, as well as specify which connection should be used by default.
+
+We will use the transaction method on the DB facade to run a set of operations within a database transaction. If an exception is 
+thrown within the transaction Closure, the transaction will automatically be rolled back. If the Closure executes successfully, 
+the transaction will automatically be committed. 

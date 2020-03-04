@@ -1,0 +1,14 @@
+User Requirements
+High level requirements that describe what a user can achieve. These are the needs that the system fulfil, 
+similar to business requirements
+
+U1. Users can post a textual update of their current mood or status.
+
+U2. Users can choose whether the post described in U1 is shared with Friends, Everyone, or Nobody other than themselves.
+
+U3. Users are presented with a list of posts made by people they are friends with or posts that are made to Everyone (see U2).
+
+U4. The posts that appear in the lists U3 are filtered to only contain those that the user will find relevant or interesting
+
+U5. The posts that appear in the lists U3 are ordered so that those the user will find highly relevant, and have not been 
+seen previously by the user are towards the top of the list.
