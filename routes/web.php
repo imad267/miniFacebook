@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,7 +13,15 @@
 |
 */
 
-Route::get('/', [
-    'uses' => '\App\Http\Controllers\HomeController@index',
-    'as' => 'home',
-]);
+Route::group(['middleware' => ['web']],function(){
+
+    Route::get('/',function() {
+        return view('welcome');
+    });
+ 
+    Route::post('/signup',[
+        'uses'=>'UserController@postSignUp',
+        'as'=>'signup'
+    ]);
+ });
+ 
